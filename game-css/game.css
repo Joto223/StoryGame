@@ -1,0 +1,11 @@
+body{
+  display: grid;
+  grid-column: 1fr;
+  grid-row: 1fr;
+  font-size: 25px;
+  background: black;
+  color: white;
+  font-family: cursive;
+  text-align: center;
+
+}

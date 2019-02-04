@@ -24,15 +24,16 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-#startGame:active{
-  opacity: 0;
-}
-#startGame:hover{
+a{
+  font-size: 20px;
   color: white;
-  background-color: black;
+
 }
 section{
   font-size: 19px;
   letter-spacing: 3px;
   display: none;
+}
+section:hover{
+  display: block;
 }
