@@ -19,3 +19,9 @@ function fade(){
   let head = document.getElementsByClassName('title');
   head.style.display = 'none';
 }
+$(document).ready(function() {
+    $(".box").hover(function(){
+        var ind = $(this).text();
+        $("h1").css("display", "block");
+    });
+});
