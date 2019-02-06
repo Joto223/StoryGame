@@ -1,23 +1,42 @@
 /*----- constants -----*/
-const NAME = document.getElementsByClassName('name');
-const start = document.querySelector('#start')
-const player = [choice1, choice2];
-var choice;
+const name = document.getElementsByClassName('name');
+const start = document.querySelector('#start');
+const player = ['$choice1', '$choice2'];
+let choice;
 /*----- app's state (variables) -----*/
 const gameTxt = document.getElementById('gameTxt');
-var $choice1 = $('#choice1').on('click', () => {
-  choice = $choice1;
-})
-var $choice2 = $('#choice2').on('click', () => {
-  choice = $choice2;
-})
+$('#choice1').on('click', () => {
+  console.log('choice1');
+  choice = '$choice1';
+  compare();
+});
+$('#choice2').on('click', () => {
+  console.log('choice2');
+  choice = '$choice2';
+  compare();
+});
 
+let branch1 = "His target is a man who is unmarried and who lives alone. His target is in debt to some very dangerous people, and so Vega's assignment is to kill him.";
+let branch2 = "When Vega gets closer he sees his target by the fireplace but he is not alone there is a young girl next to him she was about 14 or 15";
 
+let comp;
 /*----- cached element references -----*/
-/*----- event listeners -----*/ start.addEventListener('click', game)
+/*----- event listeners -----*/
+start.addEventListener('click', game);
 
 
 /*----- functions -----*/
+function compare() {
+  if (player[0] === choice){
+    comp = true;
+    return true;
+  } else {
+    comp= false;
+    return false;
+  }
+  branch();
+}
+
 function game(){
   showChoice();
 $(".nameIn").fadeOut(3000, function(){
@@ -26,21 +45,23 @@ $(".nameIn").fadeOut(3000, function(){
   $('#p1').html('Consider Objective');
   $('#p2').html('“I already know all I need to know”');
 });
-for (var i = 0; i < player.length; i++) {
-    if (player[i] === choice){
-  alert("it works");
-  // $('#gameTxt').fadeOut(3000);
-  // $('.nameIn').fadeOut(3000);
-  // $('gameTxt').html('o	His target is a man who is unmarried and who lives alone. His target is in debt to some very dangerous people, and so Vega's assignment is to kill him. ');
+// for (var i = 0; i < player.length-1; i++) {
+
+
+// }
 
 }
+
+function branch() {
+  if(comp === true){
+
+console.log("it works")
+// $('#gameTxt').fadeOut(3000);
+// $('.nameIn').fadeOut(3000);
+// $('gameTxt').html('o	His target is a man who is unmarried and who lives alone. His target is in debt to some very dangerous people, and so Vega's assignment is to kill him. ');
+}
 }
 
-}
-function c1() {
-  hideChoice();
-
-}
 
 function showChoice() {
   $('.choice').show();
