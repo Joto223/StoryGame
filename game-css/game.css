@@ -12,9 +12,12 @@ body{
   height: 200px;
   padding-top: 100px;
   display: none;
-
-
-
+}
+#p1{
+  text-align: left;
+}
+#p2{
+  text-align: right;
 }
 img{
   height: inherit;
