@@ -6,9 +6,9 @@ let choice;
 /*----- app's state (variables) -----*/
 const gameTxt = document.getElementById('gameTxt');
 $('#choice1').on('click', () => {
-  console.log('choice1');
-  choice = '$choice1';
-  compare();
+  $('#gameTxt').fadeOut(3000);
+  $('.nameIn').fadeOut(3000);
+  $('gameTxt').fadeIn(3000).html("His target is a man who is unmarried and who lives alone. His target is in debt to some very dangerous people, and so Vega's assignment is to kill him.");
 });
 $('#choice2').on('click', () => {
   console.log('choice2');
@@ -58,7 +58,7 @@ function branch() {
 console.log("it works")
 // $('#gameTxt').fadeOut(3000);
 // $('.nameIn').fadeOut(3000);
-// $('gameTxt').html('o	His target is a man who is unmarried and who lives alone. His target is in debt to some very dangerous people, and so Vega's assignment is to kill him. ');
+// $('gameTxt').html('His target is a man who is unmarried and who lives alone. His target is in debt to some very dangerous people, and so Vega's assignment is to kill him.');
 }
 }
 
